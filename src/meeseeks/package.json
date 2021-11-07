@@ -1,0 +1,11 @@
+{
+  "name": "meeseeks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "meeseeks.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Victor Porlan",
+  "license": "ISC"
+}

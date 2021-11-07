@@ -1,0 +1,25 @@
+{
+  "name": "mrmeeseeks_proxy_pattern",
+  "version": "1.0.0",
+  "description": "deberes",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorPorlan/MrMeeseeks_Proxy_Pattern.git"
+  },
+  "keywords": [
+    "OOLO"
+  ],
+  "author": "Víctor Porlan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictorPorlan/MrMeeseeks_Proxy_Pattern/issues"
+  },
+  "homepage": "https://github.com/VictorPorlan/MrMeeseeks_Proxy_Pattern#readme",
+  "dependencies": {
+    "jest": "^27.3.1"
+  }
+}

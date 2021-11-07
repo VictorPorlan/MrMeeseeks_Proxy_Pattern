@@ -1,0 +1,11 @@
+{
+  "name": "box",
+  "version": "1.0.0",
+  "description": "box",
+  "main": "box.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Victor Porlan",
+  "license": "ISC"
+}
