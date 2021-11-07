@@ -5,6 +5,13 @@ function Meeseeks () {
 
 Meeseeks.prototype.greet = function() {console.log(this.createLine)}
 
+Meeseeks.prototype.doAction = function(action) {
+    let message = this.doActionLine[Math.floor(Math.random() * this.doActionLine.length)]
+    console.log(message)
+    console.log(`Action ${action} done!`)
+}
+
+
 var factory = (function singletonMrMeeseeks() {
 
     const prototipo = new Meeseeks();

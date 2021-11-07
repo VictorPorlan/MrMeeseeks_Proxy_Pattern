@@ -7,8 +7,10 @@ function Box() {
 
 Box.prototype.createMeeseeks = function () {
     this.meeseeks = singletonMeeseeks.singletonMeeseeks.get()
-    this.meeseeks.greet()
+    return this.meeseeks
 }
+
+Box.prototype.singletonMeeseeks 
 
 var factory = (function singleBox() {
     

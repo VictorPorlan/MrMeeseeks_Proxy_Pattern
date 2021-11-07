@@ -192,4 +192,5 @@ var importaBox = require('./box');
 //     }    
 // }
 box = importaBox.singletonBox.getBox()
-box.createMeeseeks()
+meeseeks = box.createMeeseeks()
+meeseeks.doAction('Correr')
