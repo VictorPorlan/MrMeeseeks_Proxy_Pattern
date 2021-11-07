@@ -1,26 +1,41 @@
-function Meeseeks () {
-    this.createLine = "I'm Mr Meeseeks, look at me!"
-    this.doActionLine = ['Can do!', "I'll do it!"]
+function Meeseeks() {
+  this.messageOnCreate = "I'm Mr Meeseeks! Look at meeee!";
+  this.messageOnRequest = ["Can do!", "I'll do it!"];
 }
 
-Meeseeks.prototype.greet = function() {console.log(this.createLine)}
+Meeseeks.prototype.speakOnCreate = function () {
+  console.log(this.messageOnCreate);
+};
 
-Meeseeks.prototype.doAction = function(action) {
-    let message = this.doActionLine[Math.floor(Math.random() * this.doActionLine.length)]
-    console.log(message)
-    console.log(`Action ${action} done!`)
-}
+Meeseeks.prototype.speakOnRequest = function () {
+  let message = this.messageOnRequest[Math.floor(Math.random() * this.messageOnRequest.length)]
+  console.log(message);
+  return message;
+};
 
+Meeseeks.prototype.fulfillRequest = function() {
+    console.log(this.accion() + " All done!!");
+    return this.accion() + " All done!!";
+};
 
+Meeseeks.prototype.makeRequest = function (action, object) {
+  let closure = function (cosa) {
+    function execute() {
+      return deseo + " " + cosa;
+    }
+    return execute;
+  };
+  this.accion = closure(objeto);
+  this.speakOnRequest();
+};
 var factory = (function singletonMrMeeseeks() {
+  const prototipo = new Meeseeks();
 
-    const prototipo = new Meeseeks();
-
-    return {
-        get: function() {
-            return prototipo;
-        }
-    };
+  return {
+    get: function () {
+      return prototipo;
+    },
+  };
 })();
 
-exports.singletonMeeseeks = factory
+exports.singletonMrMeeseeks = factory;
