@@ -1,6 +1,8 @@
 function Meeseeks() {
   this.messageOnCreate = "I'm Mr Meeseeks! Look at meeee!";
-  this.messageOnRequest = ["Can do!", "I'll do it!"];
+  this.messageOnRequest = ["Oooh yeah! Can do!", 
+  "Yes sireee!" , 
+  "Oh, yeah!, Yes, ma'am!"];
 }
 
 Meeseeks.prototype.speakOnCreate = function () {

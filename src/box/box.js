@@ -1,7 +1,7 @@
 var singletonMrMeeseeks = require('../meeseeks/meeseeks')
 
 function Box() {
-  this.name = "Rick's Box";
+  this.name = "Rick's box";
   this.mrMeeseeks = null;
 }
 

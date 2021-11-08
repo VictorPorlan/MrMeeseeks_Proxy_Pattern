@@ -7,5 +7,8 @@
     "test": "jest"
   },
   "author": "Victor Porlan",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.3.1"
+  }
 }
