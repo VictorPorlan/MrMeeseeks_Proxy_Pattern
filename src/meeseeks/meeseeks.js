@@ -8,26 +8,47 @@ Meeseeks.prototype.speakOnCreate = function () {
 };
 
 Meeseeks.prototype.speakOnRequest = function () {
-  let message = this.messageOnRequest[Math.floor(Math.random() * this.messageOnRequest.length)]
+  let message =
+    this.messageOnRequest[
+      Math.floor(Math.random() * this.messageOnRequest.length)
+    ];
   console.log(message);
   return message;
 };
 
-Meeseeks.prototype.fulfillRequest = function() {
-    console.log(this.accion() + " All done!!");
-    return this.accion() + " All done!!";
+Meeseeks.prototype.fulfillRequest = function () {
+  console.log(this.accion() + " All done!!");
+  return this.accion() + " All done!!";
 };
 
 Meeseeks.prototype.makeRequest = function (action, object) {
   let closure = function (cosa) {
     function execute() {
-      return deseo + " " + cosa;
+      return action + " " + cosa;
     }
     return execute;
   };
-  this.accion = closure(objeto);
+  this.accion = closure(object);
   this.speakOnRequest();
 };
+
+Meeseeks.prototype.learnRequest = function (deseo, objeto) {
+  this.accion = deseo(objeto);
+};
+
+Meeseeks.prototype.formaDeSuicidio = function (arma, forma) {
+  let closure = function () {
+    return function suicidarse() {
+      return forma + " con " + arma;
+    };
+  };
+  this.suicidio = closure()
+};
+
+Meeseeks.prototype.endPain = function () {
+  console.log('MrMeeseeks ha acabado con su sufrimeinto: ' + this.suicidio())
+}
+
 var factory = (function singletonMrMeeseeks() {
   const prototipo = new Meeseeks();
 

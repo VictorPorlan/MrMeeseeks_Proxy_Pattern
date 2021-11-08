@@ -190,3 +190,6 @@ function explodeMrMeeseeks(numMeseeksToBlowOut, existence) {
         existence.shift().fulfillRequest();
     }    
 }
+
+mrMeeseeks.formaDeSuicidio('pistola', 'Tiro en la cabeza')
+mrMeeseeks.endPain()
